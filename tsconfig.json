@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "module": "amd",
+    "target": "es5",
+    "noImplicitAny": false,
+    "sourceMap": false,
+    "outDir": "dist",
+    "moduleResolution": "Node",
+    "rootDirs": [
+      "./src",
+      "./node_modules/glimmer-engine/dist/node_modules/glimmer"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "*": [
+        "packages/*",
+        "node_modules/glimmer-engine/packages/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

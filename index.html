@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>Hello World</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script src="./node_modules/glimmer-engine/dist/assets/loader.js"></script>
+  <script>loader.noConflict({ define: 'enifed' });</script>
+  <script src="./node_modules/glimmer-engine/dist/amd/glimmer-common.amd.js"></script>
+  <script src="./node_modules/glimmer-engine/dist/amd/glimmer-compiler.amd.js"></script>
+  <script src="./node_modules/glimmer-engine/dist/amd/glimmer-runtime.amd.js"></script>
+  <script src="./node_modules/glimmer-engine/dist/amd/glimmer-demos.amd.js"></script>  
+  <script src="build/src/index.js"></script>
+  <script type="text/javascript">
+    var HelloWorld = require('index');
+    HelloWorld.init();
+  </script>
+</body>
