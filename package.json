@@ -4,10 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf dist && tsc"
+    "build": "rm -rf dist && tsc",
+    "compile": "webpack"
   },
   "dependencies": {
-    "glimmer-engine": "^0.17.6",
-    "typescript": "^2.0.6"
+    "glimmer-engine": "^0.17.6"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.13",
+    "ts-loader": "^0.9.5",
+    "typescript": "^2.0.6",
+    "webpack": "^1.13.3"
   }
 }
