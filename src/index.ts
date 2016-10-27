@@ -14,7 +14,7 @@ let app = env.compile(`
 let basicRef;
 let result;
 
-export function init() {
+export default function init() {
   let output = document.getElementById('output');
   env.begin();
 
