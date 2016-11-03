@@ -1,6 +1,3 @@
-// import { UpdatableReference } from '../node_modules/glimmer-engine/packages/glimmer-object-reference';
-// import { TestEnvironment, TestDynamicScope } from '../node_modules/glimmer-engine/packages/glimmer-test-helpers';
-
 import { UpdatableReference } from 'glimmer-object-reference';
 import { TestEnvironment, TestDynamicScope } from 'glimmer-test-helpers';
 

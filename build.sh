@@ -1,6 +1,7 @@
 #! /usr/bin/env bash
 echo "Cleaning up old files"
 rm -rf build dist/hello.js
+[[ -d dist ]] || mkdir -p dist
 echo "Compiling source to amd -> build/hello.js"
 tsc --outfile build/hello.js
 echo "renaming AMD define to enifed"
