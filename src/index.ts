@@ -6,12 +6,14 @@ let env = new TestEnvironment();
 env.registerEmberishGlimmerComponent(
   'hello-world',
   null,
-  `<h1>Hello my name is {{@name}}</h1>`
+  `<h1>Hello my name is {{@name}}</h1>
+   <button onClick={{@sayHello}}>Hello</button>
+  `
  );
 
 let app = env.compile(`
   <div>
-    <hello-world @name={{name}} />
+    <hello-world @name={{name}} @sayHello={{hello}} />
   </div>
 `);
 
@@ -23,7 +25,8 @@ export default function init() {
   env.begin();
 
   basicRef = new UpdatableReference({
-    name: 'THIS IS A STANDALONE GLIMMER COMPONENT'
+    name: 'THIS IS A STANDALONE GLIMMER COMPONENT',
+    hello: () => { alert('hello')}
   });
 
   result = app.render(basicRef, output, new TestDynamicScope());
