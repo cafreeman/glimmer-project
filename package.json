@@ -4,13 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf build dist && tsc && rollup -c"
+    "build": "./build.sh"
   },
   "dependencies": {
     "glimmer-engine": "^0.17.6",
     "typescript": "^2.0.6"
-  },
-  "devDependencies": {
-    "rollup-plugin-node-resolve": "^2.0.0"
   }
 }
