@@ -1,9 +1,9 @@
-import { UpdatableReference } from 'glimmer-object-reference';
-import { TestEnvironment, TestDynamicScope } from 'glimmer-test-helpers';
+import { UpdatableReference } from '../node_modules/glimmer-engine/packages/glimmer-object-reference';
+import { TestEnvironment, TestDynamicScope } from '../node_modules/glimmer-engine/packages/glimmer-test-helpers';
 
 let env = new TestEnvironment();
 
-env.registerEmberishGlimmerComponent('hello-world', null, `<h1>Hello {{@name}}</h1>`);
+env.registerEmberishGlimmerComponent('hello-world', null, `<h1>Hello my name is {{@name}}</h1>`);
 
 let app = env.compile(`
   <div>
@@ -19,7 +19,7 @@ export default function init() {
   env.begin();
 
   basicRef = new UpdatableReference({
-    name: 'blahhhhh'
+    name: 'THIS IS A STANDALONE GLIMMER COMPONENT'
   });
 
   result = app.render(basicRef, output, new TestDynamicScope());

@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "module": "es2015",
-    "target": "es2015",
+    "module": "amd",
+    "target": "es5",
     "noImplicitAny": false,
     "sourceMap": false,
-    "outDir": "build",
+    "outFile": "./dist/hello.js",
     "moduleResolution": "Node",
     "rootDirs": [
       "./src",
-      "./node_modules/glimmer-engine/dist/node_modules/glimmer"
+      "./node_modules/glimmer-engine/packages"
     ],
     "baseUrl": "./",
     "paths": {
@@ -17,8 +17,5 @@
         "node_modules/glimmer-engine/packages/*"
       ]
     }
-  },
-  "exclude": [
-    "node_modules"
-  ]
+  }
 }
