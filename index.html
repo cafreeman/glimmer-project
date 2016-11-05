@@ -5,14 +5,14 @@
 <body>
   <div id="output"></div>
 
-  <script src="./node_modules/glimmer-engine/dist/assets/loader.js"></script>
+  <script src="./node_modules/loader.js/lib/loader/loader.js"></script>
   <script>loader.noConflict({ define: 'enifed' });</script>
   <script src="./node_modules/glimmer-engine/dist/amd/glimmer-common.amd.js"></script>
   <script src="./node_modules/glimmer-engine/dist/amd/glimmer-compiler.amd.js"></script>
   <script src="./node_modules/glimmer-engine/dist/amd/glimmer-runtime.amd.js"></script>
   <script src="./dist/hello.js"></script>
   <script type="text/javascript">
-    var HelloWorld = require('src/index').default;
-    HelloWorld();
+    var HelloWorld = require('hello');
+    HelloWorld.init();
   </script>
 </body>

@@ -1,3 +1,4 @@
+///<amd-module name="hello"/>
 import { UpdatableReference } from 'glimmer-object-reference';
 import { TestEnvironment, TestDynamicScope } from 'glimmer-test-helpers';
 
@@ -20,7 +21,7 @@ let app = env.compile(`
 let basicRef;
 let result;
 
-export default function init() {
+export function init() {
   let output = document.getElementById('output');
   env.begin();
 
