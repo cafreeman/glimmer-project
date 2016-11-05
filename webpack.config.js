@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
@@ -16,7 +17,6 @@ module.exports = {
       './node_modules',
       path.resolve('node_modules/glimmer-engine/dist/node_modules'),
       path.resolve('src'),
-      // 'packages'
     ],
   },
 
@@ -24,19 +24,27 @@ module.exports = {
     rules: [
       {
         test: /\.json$/,
-        loader: 'json-loader',
+        use: 'json-loader'
       },
       {
         test: /\.ts$/,
-        loader: 'awesome-typescript-loader',
         exclude: /node_modules/,
-        options: {
-          configFileName: 'webpack-tsconfig.json'
-        }
+        use: 'awesome-typescript-loader'
       }
     ]
   },
   plugins: [
     new CleanWebpackPlugin(['dist', 'build']),
-  ]
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })
+  ],
+  devtool: 'cheap-module-source-map'
 }

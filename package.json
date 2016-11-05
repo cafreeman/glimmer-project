@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "./build.sh",
-    "compile": "./webpack-build.sh"
+    "compile": "webpack"
   },
   "dependencies": {
     "glimmer-engine": "^0.17.6",
